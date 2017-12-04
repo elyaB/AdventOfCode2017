@@ -10,7 +10,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 @RunWith(SpringRunner.class)
 @SpringBootTest
 public class Day1Tests {
-	
+
 	@Test
 	public void Input_1122_Output_3() {
 	    Integer method = Day1.resolveCaptcha("1122");
