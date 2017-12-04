@@ -32,15 +32,15 @@ public class Day2 {
         for ( String line: lines ) {
             numbers = line.split("\t");
             maxValue = Integer.parseInt(numbers[0]);
+            minValue = Integer.parseInt(numbers[0]);
             for (int i=1; i<numbers.length; i++ ) {
-                if (Integer.parseInt(numbers[i-1]) < Integer.parseInt(numbers[i]) && Integer.parseInt(numbers[i]) > maxValue){
-                        maxValue = Integer.parseInt(numbers[i]);
-
-                } else if (Integer.parseInt(numbers[i-1]) > maxValue){
-                    maxValue = Integer.parseInt(numbers[i-1]);
+                if (Integer.parseInt(numbers[i]) > maxValue){
+                    maxValue = Integer.parseInt(numbers[i]);
+                }
+                if (Integer.parseInt(numbers[i]) < minValue){
+                    minValue = Integer.parseInt(numbers[i]);
                 }
             }
-            System.out.println("MaxValue for this line : " +maxValue);
         }
     }
 }
