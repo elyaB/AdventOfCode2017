@@ -5,7 +5,7 @@ import java.util.List;
 
 public class Day2 {
 
-    public static void splitSpreadSheet(){
+    public static void solveSpreadSheet(){
         String string = "1236\t741\t557\t1029\t144\t101\t1968\t2159\t1399\t80\t1139\t1167\t1695\t82\t90\t2236\n" +
                 "2134\t106\t107\t1025\t584\t619\t191\t496\t80\t352\t351\t2267\t1983\t1973\t97\t1244\n" +
                 "3227\t179\t691\t3177\t172\t1636\t3781\t2020\t3339\t2337\t189\t3516\t1500\t176\t159\t3279\n" +
@@ -41,6 +41,15 @@ public class Day2 {
                     minValue = Integer.parseInt(numbers[i]);
                 }
             }
+
+            checksum += calculCheckSum(maxValue, minValue);
         }
+
+        System.out.println("answer ====> " + checksum);
+
+    }
+
+    public static Integer calculCheckSum(Integer maxValue, Integer minValue) {
+        return maxValue - minValue;
     }
 }
